@@ -1,6 +1,15 @@
 
-def revword(word:str) ->str:
-    return word[::-1].lower()
+def revword(word:str) -> str:
+    word=list(word)
+    new_word=[]
+
+    for letter in reversed(word):
+      
+        new_word.append(letter.lower())
+    
+    new_word=''.join(new_word)
+    
+    return new_word
 
 def countword()->int:
     file = open("text.txt", 'r' )
